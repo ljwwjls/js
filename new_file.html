@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			  *{
+			            margin: 0;
+			            padding: 0;
+			            list-style: none;
+			        }
+			        .albumBox{
+			            width: 1200px;
+			            height: 400px;
+			            margin: 0 auto;
+			            border: 1px solid #000;
+			        }
+			 
+			        .smallBox{
+			            height: 400px;
+			            line-height: 400px;
+			            position: relative;
+			        }
+			        .smallPicBox{
+			            width: 1100px;
+			            height: 400px;
+			            float: left;
+			            position: relative;
+			        }
+			        .smallPicBox ul{
+			            width: 100%;
+			            height: 400px;
+			        }
+			        .smallPicBox li{
+			            width: 320px;
+			            height: 400px;
+			            float: left;
+			            border: 1px solid #000;
+			            box-sizing: border-box;
+			        }
+			        .smallBox .current::after{
+			            content: "\25b2";
+			            position: absolute;
+			            top: -31px;
+			            left: 70px;
+			            color: red;
+			 
+			        }
+			        .arrowLeft{
+			            width: 50px;
+			            height: 400px;
+			            position: absolute;
+			            left: 0;
+			            border: 1px solid #000;
+			            box-sizing: border-box;
+			            background-color: gray;
+			            z-index: 10;
+			        }
+			        .arrowRight{
+			            width: 50px;
+			            height: 400px;
+			            position: absolute;
+			            right: 0;
+			            border: 1px solid #000;
+			            box-sizing: border-box;
+			            background-color: gray;
+			            z-index: 10;
+			        }
+		</style>
+	</head>
+	<body>
+		  <div class="smallBox">
+		    <div class="arrowLeft">←</div>
+		    <div class="smallPicBox">            //用一个div存放一个ul，并对ul里的每一个li进行初始样式设置
+		    <ul>
+		                <li id="li1" style="position: absolute;top:calc(50% - 200px);left: 0px;z-index:1;background-color: aqua;transform: scale(0.5);transition: 0.3s;opacity: 0.5;background-image: url(./images/01.jpg);background-size: cover;"></li>
+		                <li id="li2" style="position: absolute;top:calc(50% - 200px);left: 150px; z-index:2;background-color: red;transform: scale(0.7); transition: 0.3s;opacity: 0.7;background-image: url(./images/02.jpg);background-size: cover;"></li>
+		                <li id="li3" style="position: absolute;top:calc(50% - 200px);left: 300px; z-index:3;background-color: blue;transform: scale(0.9); transition: 0.3s;opacity: 0.9;background-image: url(./images/03.jpg);background-size: cover;"></li>
+		                <li id="li4" style="position: absolute;top:calc(50% - 200px);left: 450px; z-index:4;background-color: green;transform: scale(1); transition: 0.3s;opacity: 1;background-image: url(./images/04.jpg);background-size: cover;"></li>
+		                <li id="li5" style="position: absolute;top:calc(50% - 200px);left: 600px; z-index:3;background-color: yellow;transform: scale(0.9); transition: 0.3s;opacity: 0.9;background-image: url(./images/05.jpg);background-size: cover;"></li>
+		                <li id="li6" style="position: absolute;top:calc(50% - 200px);left: 750px; z-index:2;background-color: gray;transform: scale(0.7); transition: 0.3s;opacity: 0.7;background-image: url(./images/06.jpg);background-size: cover;"></li>
+		                <li id="li7" style="position: absolute;top:calc(50% - 200px);left: 900px; z-index:1;background-color: deeppink;transform: scale(0.5); transition: 0.3s;opacity: 0.5;background-image: url(./images/07.jpg);background-size: cover;"></li>
+		            </ul>
+		        </div>
+		        <div class="arrowRight">→</div>
+		    </div>
+		</div>
+		
+		
+		
+		<script>
+		        var arrowLeft=document.querySelector(".arrowLeft")
+		        var arrowRight=document.querySelector(".arrowRight")
+		        var ul=document.querySelector(".smallPicBox ul")
+		        var li=document.querySelectorAll(".smallPicBox li")
+		        var timerId=0
+		        arrowLeft.onclick=function(){                      //左箭头点击事件
+		                li=document.getElementsByTagName('li')
+		                ul.appendChild(li[0])                         //将ul的第0个子元素剪切到末尾，实现无缝轮播
+		                 posi(li)                                 //修改每一个li的属性
+		           }
+		        arrowRight.onclick=function(){                    //右箭头点击事件
+		            li=document.getElementsByTagName('li')        //重新获取li
+		                ul.insertBefore(li[6],li[0])                 //将ul的最后一个子元素剪切到最前面，实现无缝轮播
+		                 posi(li)                                 //修改每一个li的属性
+		        }
+		        
+		        function posi(li){                                //修改li属性函数
+		            var n1=0
+		                for(var x=0;x<li.length;x++){     //修改位置
+		                    li[x].style.left=n1+'px'
+		                    n1=n1+150
+		                }
+		                for(var i=0;i<li.length/2;i++){     //修改层级
+		                    li[i].style.zIndex=i+1
+		                    li[li.length-1-i].style.zIndex=i+1
+		                }
+		                li[3].style.zIndex='4'
+		                var n2=0.3
+		                for(var j=0;j<li.length/2;j++){        //缩放
+		                    n2=parseFloat(n2+0.2)
+		                    li[j].style.transform='scale('+n2+')'
+		                    li[li.length-1-j].style.transform='scale('+n2+')'
+		                }
+		                li[3].style.transform='scale(1)'
+		                var n3=0.3
+		                for(var k=0;k<li.length/2;k++){       //修改透明度
+		                    n3=parseFloat(n3+0.2)
+		                    li[k].style.opacity=n3
+		                    li[li.length-1-k].style.opacity=n3
+		                }
+		                li[3].style.opacity='1'
+		        }
+		        //鼠标移入移出
+		        temerId=setInterval(function(){
+		             arrowLeft.click()
+		        }, 1000);
+		        arrowLeft.onmouseover=function(){
+		            clearInterval(temerId)
+		        }
+		        arrowLeft.onmouseout=function(){
+		           temerId=setInterval(function(){
+		            arrowLeft.click()
+		         }, 1000);
+		        }
+		        arrowRight.onmouseover=function(){
+		            clearInterval(temerId)
+		        }
+		        arrowRight.onmouseout=function(){
+		           temerId=setInterval(function(){
+		            arrowLeft.click()
+		         }, 1000);
+		        }
+		    </script>
+	</body>
+</html>

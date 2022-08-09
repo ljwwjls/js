@@ -1,0 +1,3290 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.icon {
+			  width: 1em;
+			  height: 1em;
+			  vertical-align: -0.15em;
+			  fill: currentColor;
+			  overflow: hidden;
+			  
+			}
+			.zuida{
+				max-width: 1700px;
+				min-width: 1280px;
+				overflow: hidden;
+				position: relative;
+			}
+			.logo{
+				width: 100%;
+				height: 50px;
+			}
+			.dhz{
+				width: 1200px;
+				height: 50px;
+				margin: 0 auto;
+				position: relative;
+				
+			}
+			.tx{
+				width: 177px;
+				height: 50px;
+				float: left;
+			}
+			.tx img{
+				width: 66%;
+			}
+			.xw{
+				width: 255px;
+				height: 50px;
+				float: left;
+				position: relative;
+			}
+			.xw img{
+				width: 100%;
+			}
+			.xwd{
+			width: 1159px;;
+				height: 222px;
+				position: absolute;
+				top: 0;
+				left: -179px;
+				background: url(img/xwd.jpg) no-repeat ;
+				background-size: 100%;
+				display: none;
+				z-index: 5;
+			}
+			.xw:hover .xwd{
+				display: block;
+			}
+			
+			.you{
+				width: 339px;
+				height: 50px;
+				float: right;
+			}
+			.cz{
+				width: 140px;
+				height: 50px;
+				float: left;
+			}
+			.cz svg{
+				font-size: 34px;
+				line-height: 30px;
+			}
+			.bb{
+				width: 31px;
+				height: 30px;
+				float: left;
+				margin-top: 5px;
+			}
+			.cz a{
+				float: left;
+				line-height: 45px;
+				text-decoration: none;
+				color: black;
+				font-size: 15px;
+			}
+			.rm{
+				width: 177px;
+				height: 50px;
+				float: left;
+			}
+			.rm img{
+				width: 18px;
+				height: 18px;
+				float: left;
+				margin-top: 14px;
+				margin-left: 5px;
+				cursor: pointer;
+			}
+			.rm p{
+				line-height: 45px;
+				font-size: 15px;
+				float: left;
+				cursor: pointer;
+			}
+			.rm ul{
+				width: 885px;
+				/* height: 410px; */
+				overflow: hidden;
+				position: absolute;
+				top:50px;
+				right: 0;
+				display: none;
+				background-color: #F6F6F6;
+				z-index: 99;
+			}
+			.rm ul li{
+				width: 260px;
+				height: 320px;
+				overflow: hidden;
+				float: left;
+				list-style: none;
+				position: relative;
+				margin-left: 25px;
+			}
+			.rm ul li span{
+				position: absolute;
+				right: 35px;
+				top:0;
+			}
+			.rm:hover ul{
+				display: block;
+			}
+			.top1{
+				width: 100%;
+				height: 45px;
+				
+			}
+			.top1 p{
+				width: 15px;
+				height: 15px;
+				text-align: center;
+				line-height: 15px;
+				background-color: red;
+				color: white;
+				float: left;
+				margin-top: 16px;
+			}
+			.top1 a{
+				text-decoration: none;
+				color: #000000;
+				float: left;
+				margin-top: 12px;
+				text-indent: 7px;
+				display: block;
+				
+			}
+			.cy{
+				width: 240px;
+				height: 100px;
+				background: url(img/img0.jpg)no-repeat;
+				background-size: 100%;
+				position: relative;
+				display: none;
+			}
+			.cy p{
+				width: 15px;
+				height: 15px;
+				text-align: center;
+				line-height: 15px;
+				background-color: red;
+				color: white;
+				float: left;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			
+			.gu{
+				width: 50%;
+				height:28px ;
+				background-color: #4c4c4c;
+				/* opacity: .6; */
+				text-decoration: none;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				color: #f6f6f6;
+				text-align: center;
+				line-height: 28px;
+			}
+			.xz{
+				width: 50%;
+				height:28px ;
+				background-color: #4c4c4c;
+				/* opacity: .6; */
+				text-decoration: none;
+				text-align: center;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				color: #f6f6f6;
+				line-height: 28px;
+			}
+			.dh{
+				width: 100%;
+				overflow: hidden;
+				background-color: #1d1e22;
+			}
+			.zz{
+				width: 1480px;
+				overflow: hidden;
+			}
+			.ty{
+				width: 145px;
+				height: 55px;
+				margin-left: 30px;
+				float: left;
+			}
+			.ty img{
+				width: 100%;
+			}
+			.sy{
+				width: 1200px;
+				height: 55px;
+				float: right;
+				display: flex;
+				justify-content:space-around;
+				
+			}
+			.sy a{
+				text-decoration: none;
+						width: 88px;
+						height: 55px;
+							}
+			.tt1{
+				/* width: 165px; */
+				width: 100%;
+				height: 55px;
+				border-right: 1px slategray;
+				float: left;
+				list-style: none;
+				background: url(img/gnav_t_01.png) no-repeat -35px 11px;
+				background-size: 163% ;
+			}
+			.tt1:hover{
+				background: url(img/gnav_t_01.png) no-repeat -35px -30px;
+				background-size: 163% ;
+			}
+			.tt2,.tt3,.tt4,.tt5,.tt6,.tt7,.tt8,.tt9{
+				/* width: 165px; */
+				width: 100%;
+				height: 55px;
+				border-right: 1px slategray;
+				float: left;
+				list-style: none;
+			}
+			.tt2{
+				background: url(img/gnav_t_02.png) no-repeat -35px 15px;
+				background-size: 163% ;
+			}
+			.tt2:hover{
+				background: url(img/gnav_t_02.png) no-repeat -35px -21px;
+				background-size: 163% ;
+			}
+			.tt3{
+				background: url(img/gnav_t_03.png) no-repeat -23px 13px;
+				background-size: 163% ;
+			}
+			.tt3:hover{
+				background: url(img/gnav_t_03.png) no-repeat -23px -27px;
+				background-size: 163% ;
+			}
+			.tt4{
+				background: url(img/gnav_t_04.png) no-repeat -26px 13px;
+				background-size: 163% ;
+			}
+			.tt4:hover{
+				background: url(img/gnav_t_04.png) no-repeat -26px -27px;
+				background-size: 163% ;
+			}
+			.tt5{
+				background: url(img/gnav_t_05.png) no-repeat -26px 13px;
+				background-size: 163% ;
+			}
+			.tt5:hover{
+				background: url(img/gnav_t_05.png) no-repeat -26px -25.5px;
+				background-size: 163% ;
+			}
+			.tt6{
+				background: url(img/gnav_t_06.png) no-repeat -26px 13px;
+				background-size: 163% ;
+			}
+			.tt6:hover{
+				background: url(img/gnav_t_06.png) no-repeat -26px -25.5px;
+				background-size: 163% ;
+			}
+			.tt7{
+				background: url(img/gnav_t_07_07.png) no-repeat -26px 13px;
+				background-size: 163% ;
+			}
+			.tt7:hover{
+				background: url(img/gnav_t_07_07.png) no-repeat -26px -27px;
+				background-size: 163% ;
+			}
+			.tt8{
+				background: url(img/gnav_t_08.png) no-repeat -26px 13px;
+				background-size: 163% ;
+			}
+			.tt8:hover{
+				background: url(img/gnav_t_08.png) no-repeat -26px -27px;
+				background-size: 163% ;
+			}
+			.tt9{
+				background: url(img/gnav_t_09.png) no-repeat -26px 13px;
+				background-size: 163% ;
+			}
+			.tt9:hover{
+				background: url(img/gnav_t_09.png) no-repeat -26px -24.5px;
+				background-size: 163% ;
+			}
+			
+			.donghuada{
+				width: 100%;
+				overflow: hidden;
+				position: relative;
+				height: 803px;
+				text-align: center;
+			}
+				
+			.donghuada video{
+				position: absolute;
+				top:-68px;
+				left: -89px;
+				
+				width:1700px;
+				height:870px;
+				z-index: -1;
+				
+			}
+			.gf{
+				width: 940px;
+				height: 554px;
+				
+				/* margin-top: 170px; */
+				position: absolute;
+				top: 170px;
+				left: 270px;
+				
+			}
+			.gf img{
+				width: 100%;
+			}
+			.xzz{
+				width: 582px;
+				height: 212px;
+				position: absolute;
+				bottom: 53px;
+				left:464px;
+				z-index: 4;
+			}
+			.ewm{
+				width: 372px;
+				height: 155px;
+				background: url(img/btn_down.png) no-repeat -45px -36px;
+				background-size: 124%;
+				position: relative;
+				float: left;
+			}
+			.ewm img{
+				position: absolute;
+				top: 27px;
+				left: 36px;
+			}
+			.pg{
+				width: 186px;
+				height: 54px;
+				display: block;
+				position: absolute;
+				top: 22px;
+				right: 15px;
+			}
+			.az{
+				width: 186px;
+				height: 54px;
+				display: block;
+				position: absolute;
+				bottom: 14px;
+				right: 15px;
+			}
+			.pc{
+				width: 207px;
+				height: 130px;
+				position: absolute;
+				bottom: 61px;
+				right: 4px;
+			}
+			.pc a{
+				width: 207px;
+				height: 65px;
+				display: block;
+			}
+			.pc a img{
+				width: 100%;
+			}
+			.huaban{
+				width: 1510px;
+				height: 800px;
+				position: absolute;
+				top: 158px;
+				left: 152px;
+				z-index: 3;
+			}
+			.huaban img{
+				width: 87%;
+			}
+			
+			
+			
+			/* 视频下 */
+			.spx{
+				width: 100%;
+				overflow: hidden;
+				background-color: #f6f6f6;
+				
+			}
+				
+			.spxz{
+				width: 100%;
+				height: 148px;
+				background: url(./img/bg_fnews.jpg) no-repeat;
+				background-size: 100%;
+				overflow: hidden;
+			}
+			.jh{
+				width: 202px;
+				height: 74px;
+				margin: 0 auto;
+				margin-top: 39px;
+				background: url(img/t.png) no-repeat -37px -23px;
+				background-size: 140%;
+			}
+			.gl{
+				width: 1441px;
+				/* overflow: hidden; */
+				margin: 0 auto;
+				z-index: 5;
+				margin-top: 20px;
+			}
+		    .as{
+		    	    width: 706px;
+		    	    height: 466px;
+		    	overflow: hidden;
+		    	position: relative;
+				float:left ;
+		    }
+			.ld{
+				width: 900%;
+				overflow: hidden;
+				/* margin: 0 auto; */
+				position: absolute;
+				top: 0;
+				left: 0;
+				
+			}
+			.ld li{
+				list-style: none;
+				float: left;
+				    width: 706px;
+				    height: 466px;
+			}
+			 .ld li img{
+				    width: 706px;
+				    height: 466px;
+			}
+			.ld2{
+				width: 323px;
+				    overflow: hidden;
+				    position: absolute;
+				    bottom: 4px;
+				    left: 388px;
+			}
+			.ld2 li{
+				    width: 59px;
+				    height: 7px;
+				    background-color: #c7c8c9;
+				    float: left;
+				    list-style: none;
+				    margin-right: 5px;
+				    margin-top: 5px;
+			}
+			.ld2 .bj{
+				background-color: #dcc072;
+			}
+			.ys{
+				width: 20px;
+				height: 20px;
+				background-color: #00FFFF;
+			}
+			
+			
+			.lby{
+				
+				width: 613px;
+				height: 454px;
+				
+				float: left;
+				margin-left: 10px;
+			}
+			
+			.gg{
+				width: 581px;
+				height: 324px;
+				border: 4px solid #e0e1e1;
+				z-index: 5;
+				position: relative;
+			}
+			.trr{
+				width: 515px;
+				height: 36px;
+				display: flex;
+				justify-content: space-between;
+				background-color: #f6f6f6;
+				position: absolute;
+				top: -16px;
+				left: -4px;
+			}
+			.zuixin{
+				width: 71px;
+				height: 36px;
+				z-index: 5;
+				list-style: none;
+				text-align: center;
+				font-size: 18px;
+				line-height: 36px;
+				cursor: pointer;
+				
+			}
+			 li{
+				list-style: none;
+			}
+			.trr span{
+				width:21px ;
+				height: 21px;
+				z-index: 5;
+				margin-top: 10px;
+			}
+			.trr span img{
+				width: 100%;
+			}
+			.jiahao{
+				width: 48px;
+				height: 48px;
+				position: absolute;
+				top: -20px;
+				right: -26px;
+				background-color:#f6f6f6 ;
+				text-align: center;
+				line-height: 48px;
+				overflow: hidden;
+			}
+			.jiahao img{
+				width: 75%;
+				margin-top: 3px;
+			}
+			.bs{
+				width: 552px;
+				height: 287px;
+				display: none;
+				background-color:#f6f6f6 ;
+				position: absolute;
+				top: 20px;
+				left: -6px;
+			}
+			
+			.toutiao{
+				/* width: 502px; */
+				width: 552px;
+				height: 41px;
+				overflow: hidden;
+			}
+			.toutiao a{
+					width: 42px;
+					height: 17px;
+					display: block;
+					border-right: 2px solid #6baacf;
+					color: #6baacf;
+					text-align: center;
+					line-height: 17px;
+					text-decoration: none;
+					margin-left: 10px;
+					font-size: 14px;
+					margin-top: 10px;
+					float: left;
+				}
+			.toutiao p{
+				width: 351px;
+				height: 32px;
+				float: left;
+				line-height: 36px;
+				font-size: 14px;
+				margin-left:6px;
+				cursor: pointer;
+				text-overflow: -o-ellipsis-lastline;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: -webkit-box;
+				-webkit-line-clamp: 1; 
+				-webkit-box-orient: vertical
+				
+			}
+			.toutiao span{
+				width: 100px;
+				height: 36px;
+				line-height: 36px;
+				font-size: 12px;
+				font-family: "宋体";
+				float: right;
+				position: relative;
+				cursor: pointer;
+			}
+			.toutiao span i{
+				width: 14px;
+				height: 2px;
+				border-bottom: 2px solid #c7c8c9;
+				position: absolute;
+				top: 25px;
+				left: 0;
+				
+			}
+			.sp{
+				border-radius: 23px;
+				width: 72px;
+				height: 24px;
+				z-index: 5;
+				list-style: none;
+				text-align: center;
+				font-size: 15px;
+				line-height: 25px;
+				cursor: pointer;
+				background-color: #dcc072;
+				color: #FFFFFF;
+			}
+			.hd{
+				width: 100%;
+				height: 115px;
+				margin-top: 9px;
+				background: url(img/fnews_gg.jpg) no-repeat;
+				background-size: 100%;
+				display: flex;
+				justify-content: space-between;
+			}
+			.hd a{
+				width: 191px;
+				height: 112px;
+				}
+			
+			
+			/* 八荒门派 */
+			.bh{
+				width: 100%;
+				overflow: hidden;
+				background:url(img/bg_menpai.jpg) no-repeat;
+				background-size: 100%;
+				position: relative;
+			}
+			.bhz{
+				width: 100%;
+				height: 148px;
+				background: url(./img/bg_menpai.jpg) no-repeat;
+				background-size: 100%;
+				overflow: hidden;
+			}
+			.bhzz{
+				width: 202px;
+				height: 74px;
+				margin: 0 auto;
+				margin-top: 39px;
+				background: url(img/t.png) no-repeat -37px -299px;
+				background-size: 140%;
+				
+			}
+			.rw{
+				width: 100%;
+				overflow: hidden;
+				position: relative;
+				/* height: 786px; */
+				height: 621px;
+			}
+			.mp{
+				width: 166px;
+				height: 409px;
+				position: absolute;
+				top: -10px;
+				left: 99px;
+				z-index: 4;
+			}
+			.wd{
+				width: 166px;
+				height: 114px;
+				position: absolute;
+				top: 386px;
+				left: 100px;
+				z-index: 4;
+			}
+			.wd div{
+				width: 166px;
+				height: 35px;
+				margin-top: 15px;
+			}
+			.mp li{
+				width: 166px;
+				height: 35px;
+				margin-top: 15px;
+			}
+			.mp li div{
+				width:88px ;
+				height: 25px;
+				margin: 0 auto;
+				position: relative;
+			}
+			.s1{
+				width: 20px;
+				height: 20px;
+				background:url(img/sp.png) no-repeat -681px -176px;
+				display: block;
+				float: left;
+				margin: 0 auto;
+				margin-top: 8px;
+				
+			}
+			
+			
+			.mp li div p{
+				width: 35px;
+				height: 25px;
+				text-align: center;
+				line-height: 31px;
+				
+				margin: 0 auto;
+			}
+			.wd p{
+				width: 35px;
+				height: 25px;
+				text-align: center;
+				line-height: 31px;
+				color: #979797;
+				margin: 0 auto;
+			}
+			.sb {
+				    width: 20px;
+				    height: 20px;
+				    background: url(img/sp.png) no-repeat -681px -176px;
+				    display: block;
+				    float: left;
+				    margin: 0 auto;
+				    margin-top: 8px;
+					margin-left: 39px;
+			}
+			.nn{
+				width: 166px;
+				height: 35px;
+				background: url(img/gfh_03.png) no-repeat -2px -8px ;
+				background-size: 100%;
+				position: relative;
+			}
+			
+			.s22{
+				width: 20px;
+				height: 20px;
+				
+				display: block;
+				float: left;
+				margin: 0 auto;
+				margin-top: 8px;
+				/* margin-left: 38px; */
+				display: none;
+				position: absolute;
+				top: -1px;
+				left: -3;
+			}
+			.s22 img{
+				width: 100%;
+			}
+			.ss{
+				width: 969px;
+				height: 590px;
+				position: absolute;
+				top: 52px;
+				right: 0;
+			}
+			.ss video{
+				width: 969px;
+				height: 590px;
+				
+			}
+			.rwt{
+				width: 100%;
+				z-index: 1;
+				position: absolute;
+				/* height: 549px; */
+				bottom: 0px;
+				left: 0;
+			}
+			.rwt img{
+				width: 100%;
+				
+			}
+			
+			.yg{
+				width: 100%;
+				overflow: hidden;
+				background: url(img/bg_gonglue.jpg) no-repeat;
+				background-size: 100%;
+			}
+			.ygz{
+				width: 1441px;
+				overflow: hidden;
+				margin: 0 auto;
+				
+			}
+			.ygzz{
+				width: 202px;
+				height: 74px;
+				background: url(img/tit_gonglue.png) no-repeat  -21px -17px;
+				background-size: 129%;
+				margin: 0 auto;
+				margin-top: 100px;
+			}
+			.qiyu{
+				width: 1205px;
+				height: 171px;
+				background-color: #FFFFFF;
+				margin: 0 auto;
+			}
+			.hh{
+				width: 971px;
+				overflow: hidden;
+				margin: 0 auto;
+				
+			}
+			.hh li{
+				width: 158px;
+				overflow: hidden;
+				float: left;
+				margin-top: 11px;
+			}
+			.hh li a{
+				width: 156px;
+				height: 31px;
+				display: block;
+				text-decoration: none;
+				text-align: center;
+				color: #000000;
+				line-height: 31px;
+			}
+			.hh  span{
+				float: left;
+				color:#cccccc;
+				margin-top: 17px;
+			}
+			.xian{
+				width: 1080px;
+				height: 1px;
+				background-color: #dcc072;
+				margin: 0 auto;
+				/* margin-top: 9px; */
+			}
+			.yuo{
+				width: 158px;
+				overflow: hidden;
+				float: left;
+				background-color: #dcc072;
+				color: #f9fff6;
+			}
+			.qiehuan{
+				width: 1083px;
+				overflow: hidden;
+				margin: 0 auto;
+				display: none;
+			}
+			.yi{
+				width: 361px;
+				height: 113px;
+				float: left;
+				margin-top: 25px;
+			}
+			.yii a{
+				width: 33px;
+				height: 21px;
+				text-align: center;
+				text-decoration: none;
+				color: #439fb8;
+				border-right: 1px solid #439fb8;
+				float: left;
+				font-size: 13px;
+				margin-top: 3px;
+			}
+			.yii p{
+				width: 310px;
+				height: 25px;
+				font-size: 12px;
+				color: #666666;
+				float: left;
+				line-height: 25px;
+				text-indent: 5px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+
+			}
+			.yii span{
+				width: 68px;
+				height: 14px;
+				line-height: 14px;
+				
+			}
+			.xia1{
+				width: 1205px;
+				overflow: hidden;
+				display: flex;
+				justify-content: space-between;
+				margin: 0 auto;
+				margin-bottom: 128px;
+			}
+			.xia1 a{
+				width: 388px;
+				height: 196px;
+				display: block;
+			}
+			.xia1 a img{
+				width: 100%;
+			}
+			.td{
+				width: 100%;
+				overflow: hidden;
+				background: url(img/bg_03-4.png) no-repeat;
+				background-size: 100%;
+				position: relative;
+				height: 800px;
+			}
+			.tou{
+				width: 202px;
+				height: 74px;
+				margin: 0 auto;
+				background:url(img/t1.png) no-repeat -11px  -10px;
+				background-size: 117%;
+				margin-top: 54px;
+			}
+			.datu{
+				width: 226px;
+				    height: 226px;
+				    position: absolute;
+				    top: 522px;
+				    left: 648px;
+					background: url(img/btn.png) no-repeat ;
+					background-size: 100%;
+					animation: gb 8s infinite;
+					animation-timing-function: linear;
+					cursor: pointer;
+			}
+			@keyframes gb{
+				0% {
+				    transform: rotateZ(0deg);
+				}
+				
+				100% {
+				    transform: rotateZ(360deg);
+			}
+			}
+			.kq{
+				width: 346px;
+				height: 28px;
+				position: absolute;
+				top: 626px;
+				left: 589px;
+				background: url(img/btn_name.png) no-repeat;
+				background-size: 100%;
+				cursor: pointer;
+			}
+			.ya{
+				width: 100%;
+				overflow: hidden;
+				background: url(img/hgjkl.jpg) no-repeat;
+				background-size: 100%;
+				background-color: #f9fbfc;
+			}
+			.yaz{
+				width: 1216px;
+				overflow: hidden;
+				margin: 0 auto;
+			}
+			.yazz{
+				width: 202px;
+				height: 74px;
+				margin: 0 auto;
+				background: url(img/tit_tongren.png)no-repeat -12px -11px;
+				background-size: 117%;
+				margin-top: 54px;
+			}
+			.ml{
+				width: 1216px;
+				height: 619px;
+				position: relative;
+				display: flex;
+				justify-content: space-between;
+			}
+			.ml1{
+				width: 385px;
+				height: 485px;
+				border: 2px solid#dcc072;
+				position: relative;
+				margin-top: 88px;
+			}
+			.ml11{
+				width: 353px;
+				position: absolute;
+				top: -65px;
+				left: 15px;
+			}
+			.ml2{
+			    width: 353px;
+			    height: 48px;
+			    position: absolute;
+			    bottom: 2px;
+			    left: 16px;
+			
+			}
+			.ml2 i{
+				width: 15px;
+				height: 15px;
+				float: left;
+			}
+			.ml2 h5{
+				float: left;
+				text-indent: 6px;
+			}
+			.xian2{
+				width: 30px;
+				height: 1px;
+				background-color:#dcc072 ;
+				float: left;
+			}
+			.ml2 p{
+				width: 361px;
+				height: 18px;
+				font-size: 12px;
+				color: #666666;
+				text-align: left;
+			}
+			.sg{
+				width: 255px;
+				height: 470px;
+				border: 2px solid#dcc072;
+				margin-top: 103px;
+			position: relative;
+			}
+			
+			.ml a{
+				text-decoration: none;
+				color: #c3c4c5;
+				font-size: 15px;
+				position: absolute;
+				top: 5px;
+				right: 35px;
+			}
+			.jiahao2{
+				width: 33px;
+				height: 33px;
+				position: absolute;
+				top: 0px;
+				right: 0px;
+			}
+			.jiahao2 img{
+				width: 100%;
+			}
+			.sbb{
+				width: 224px;
+				position: absolute;
+				left: 16px;
+				top: 29px;
+			}
+			.sg span{
+				display: block;
+				width: 15px;
+				height: 15px;
+				margin-left: 8px;
+				margin-top: 5px;
+				float: left;
+			}
+			.sg span img {
+				width: 100%;
+			}
+			.sg2{
+				width: 232px;
+				height: 53px;
+				position: absolute;
+				bottom: 0;
+				left: 11px;
+			}
+			.sg2 h5{
+				float: left;
+				margin-top: 5px;
+			}
+			.xian3{
+				width: 30px;
+				height: 1px;
+				background-color:#dcc072 ;
+				margin-top: 3px;
+				margin-left: 8px;
+			}
+			.sg2 p{
+				width: 361px;
+				height: 18px;
+				font-size: 12px;
+				color: #666666;
+				text-align: left;
+				text-indent: 6px;
+			}
+			.te{
+				width: 100%;
+				overflow: hidden;
+			}
+			.tes{
+				width: 100%;
+				height: 787px;
+				margin: 0 auto;
+			}
+			.tes1{
+				    width: 202px;
+				    height: 74px;
+				    margin: 0 auto;
+				    background: url(./img/t.png) -12px -112px;
+				    background-size: 117%;
+				    margin-top: 54px;
+					position: relative;
+			}
+			.tes2{
+				width: 100%;
+				height: 573px;
+			}
+			.tu2{
+				width: 901px;
+				height: 446px;
+				margin: 0 auto;
+			}
+		
+			.tes22{
+				width: 1000%;
+				height: 433px;
+				margin: 0 auto;
+				overflow: hidden;
+				position: relative;
+			}
+			.tes22 img{
+				width: 100%;
+			}
+			.tes23{
+				width: 169px;
+				height: 20px;
+				background-color: #A9A9A9;
+				position: absolute;
+				bottom: 46px;
+				left: 56px;
+				opacity: .7;
+			}
+			.tes23 li{
+				width: 20px;
+				height: 20px;
+				float: left;
+				list-style: none;
+				border: 1px solid#000000;
+				margin-left: 2px;
+			}
+			.ys{
+				width: 20px;
+				height: 20px;
+				background-color: #00FFFF;
+			}
+			.shang{
+				width: 48px;
+				height: 45px;
+				position: absolute;
+				top: 199px;
+				left: 0px;
+			}
+			.shang img{
+				width: 100%;
+				}
+			.xia{
+					width: 48px;
+					height: 45px;
+					position: absolute;
+					top: 199px;
+					right: 0px;
+				}
+			.xia img{
+					width: 100%;
+				}
+			.st{
+				width: 100%;
+				overflow: hidden;
+				background:url(img/11.jpg)no-repeat;
+				background-size: 100%;
+			}
+			.stt{
+				width: 1438px;
+				/* width: 1515px; */
+				height: 740px;
+				margin: 0 auto;
+			}
+			.stt1{
+				    width: 202px;
+				    height: 74px;
+				    margin: 0 auto;
+				    background: url(./img/t.png) -12px -364px;
+				    background-size: 117%;
+				    margin-top: 54px;
+			}
+			.stt2{
+				width: 1435px;
+				/* width: 1515px; */
+				height: 664px;
+				position: relative;
+			}	
+			.stt21{
+				width: 394px;
+				height: 304px;
+				display: block;
+				float: left;
+				overflow: hidden;
+			}
+			.stt21 img{
+				width: 100%;
+			}
+			.stt2 img:hover{
+				transform: scale(1.2,1.2);
+				transition: all ease-in-out 0.3s;
+			}
+			.stt22{
+				width: 213px;
+				height: 325px;
+				display: block;
+				float: left;
+				overflow: hidden;
+			}
+			.stt22 img{
+				width: 100%;
+			}
+			.stt23{
+				width: 220px;
+				height: 378px;
+				display: block;
+				float: left;
+				overflow: hidden;
+			}
+			.stt23 img{
+				width: 100%;
+			}
+			.stt24{
+				width: 266px;
+				height: 294px;
+				display: block;
+				float: left;
+				overflow: hidden;
+			}
+			.stt24 img{
+				width: 100%;
+			}
+			.stt25{
+				width: 340px;
+				height: 217px;
+				display: block;
+				float: left;
+				overflow: hidden;
+				position: relative;
+			}
+			.stt25 img{
+				width: 100%;
+			}
+			.stt25 i{
+				width: 85px;
+				height: 80px;
+				background:url(img/btn-video1.png) no-repeat ;
+				background-size: 100%;
+				position: absolute;
+				top: 72px;
+				left: 128px;
+				animation: lj 8s infinite;
+				animation-timing-function: linear;
+			}
+			@keyframes lj{
+				
+				100%{ transform: rotate(360deg);}
+			}
+			.stt25 span{
+				width: 52px;
+				height: 57px;
+				background: url(img/btn-video.png) no-repeat;
+				background-size: 100%;
+				position: absolute;
+				top: 87px;
+				left: 146px;
+			}
+			.stt26{
+				width: 396px;
+				height: 196px;
+				display: block;
+				float: left;
+				position: absolute;
+				top: 207px;
+				left: 0;
+				overflow: hidden;
+			}
+			.stt26 img{
+				width: 100%;
+			}
+			.stt27{
+				width: 212px;
+				height: 170px;
+				display: block;
+				float: left;
+				position: absolute;
+				top: 229px;
+				left: 395px;
+				overflow: hidden;
+			}
+			.stt27 img{
+				width: 100%;
+			}
+			.stt28{
+				width: 220px;
+				height: 378px;
+				display: block;
+				float: left;
+				position: absolute;
+				top:288px;
+				left: 607px;
+				overflow: hidden;
+			}
+			.stt28 img{
+				width: 100%;
+			}
+			.stt29{
+				width: 266px;
+				height: 173px;
+				display: block;
+				position: absolute;
+				top: 293px;
+				left: 827px;
+				overflow: hidden;
+			}
+			.stt29 img{
+				width: 100%;
+			}
+			.stt29 i{
+				width: 85px;
+				height: 80px;
+				background:url(img/btn-video1.png) no-repeat ;
+				background-size: 100%;
+				position: absolute;
+				top: 49px;
+				left: 97px;
+				animation: ljj 8s infinite;
+				animation-timing-function: linear;
+			}
+			@keyframes ljj{
+				
+				100%{ transform: rotate(360deg);}
+			}
+			.stt29 span{
+				width: 52px;
+				height: 57px;
+				background: url(img/btn-video.png) no-repeat;
+				background-size: 100%;
+				position: absolute;
+				top: 66px;
+				left: 114px;
+			}
+			.stt291{
+				width: 347px;
+				height: 278px;
+				display: block;
+				position: absolute;
+				top: 214px;
+				left: 1093px;
+				overflow: hidden;
+			}
+			.stt291 img{
+				width: 100%;
+			}
+			.stt291 i{
+				width: 85px;
+				height: 80px;
+				background:url(img/btn-video1.png) no-repeat ;
+				background-size: 100%;
+				position: absolute;
+				top: 95px;
+				left: 127px;
+				animation: ljjj 8s infinite;
+				animation-timing-function: linear;
+			}
+			@keyframes ljjj{
+				
+				100%{ transform: rotate(360deg);}
+			}
+			.stt291 span{
+				width: 52px;
+				height: 57px;
+				background: url(img/btn-video.png) no-repeat;
+				background-size: 100%;
+				position: absolute;
+				top: 113px;
+				left: 144px;
+			}
+			.stt292{
+				width: 310px;
+				height: 262px;
+				display: block;
+				position: absolute;
+				top: 402px;
+				left: 0;
+				overflow: hidden;
+			}
+			.stt292 img{
+				width: 100%;
+			}
+			.stt293{
+				width: 296px;
+				height: 261px;
+				display: block;
+				position: absolute;
+				top: 400px;
+				left: 311px;
+				overflow: hidden;
+			}
+			.stt293 img{
+				width: 100%;
+				height: auto;
+				}
+			.stt294{
+				width: 613px;
+				height: 291px;
+				display: block;
+				position: absolute;
+				top: 375px;
+				left: 827px;
+				z-index: -1;
+				overflow: hidden;
+			}
+			.stt294 img{
+				width: 100%;
+			}
+			.stt294 i{
+				width: 85px;
+				height: 80px;
+				background:url(img/btn-video1.png) no-repeat ;
+				background-size: 100%;
+				position: absolute;
+				top: 151px;
+				left: 263px;
+				animation: ljjjj 8s infinite;
+				animation-timing-function: linear;
+			}
+			@keyframes ljjjj{
+				
+				100%{ transform: rotate(360deg);}
+			}
+			.stt294 span{
+				width: 52px;
+				height: 57px;
+				background: url(img/btn-video.png) no-repeat;
+				background-size: 100%;
+				position: absolute;
+				top: 170px;
+				left: 280px;
+			}
+			.qd{
+				width: 100%;
+				overflow: hidden;
+				background:url(img/12456.jpg) no-repeat ;
+				background-size: 100%;
+			}
+			.qdz{
+				width: 1274px;
+				height: 136px;
+				margin: 0 auto;
+				margin-top: 212px;
+				margin-bottom: 190px;
+				background:url(img/sp.png) no-repeat  -7px -209px ;
+				background-size: 100%;
+				display: flex;
+				justify-content: space-between;
+				
+			}
+			.qdz a{
+				width: 188px;
+				height: 98px;
+				display: block;
+				text-decoration: none;
+				overflow: hidden;
+				position: relative;
+			}
+			.qdz a b{
+				font-size: 15px;
+				
+				
+				color: #000000;
+				position: absolute;
+				top: 34px;
+				left: 86px;
+			}
+			.zi{
+				width: 100%;
+				overflow: hidden;
+				background-color: #1e2628;
+			}
+			.ziz{
+				width: 692px;
+				height: 59px;
+				margin: 0 auto;
+			}
+			.ziz p{
+				font-size: 12px;
+				color: #4f5f5f;
+				line-height: 27px;
+				text-align: center;
+			}
+			.dibu{
+				width: 100%;
+				overflow: hidden;
+				background-color: #000000;
+			}
+			.dibuz{
+				width: 1187px;
+				height: 156px;
+				margin: 0 auto;
+				overflow: hidden;
+			}
+			.logo2{
+				width: 387px;
+				height: 62px;
+				margin-top: 42px;
+				float: left;
+			}
+			.logo2 div{
+				width: 187px;
+				height: 61px;
+				float: left;
+				
+			}
+			.xs{
+				width: 651px;
+				height: 103px;
+				float: right;
+				margin-top: 48px;
+				
+			}
+			.xs li{
+				font-size: 12px;
+				    color: #494949;
+					cursor:pointer;
+					line-height: 20px;
+			}
+			.gd{
+				width: 411px;
+				height: 348px;
+				background: url(img/flt.png) no-repeat;
+				background-size: 100%;
+				position: fixed;
+				bottom: 0;
+				left: 0;
+				z-index: 99;
+			}
+			.guanbi{
+				width: 33px;
+				height: 33px;
+				display: block;
+				float: right;
+				margin-top: 35px;
+			}
+			.lianjie{
+				width: 149px;
+				height: 36px;
+				display: block;
+				position: absolute;
+				bottom: 17px;
+				left: 129px;
+			}
+			.gd2{
+				width: 142px;
+				height: 548px;
+				position: fixed;
+				bottom: 0px;
+				right: 0;
+				background: url(img/side.png) no-repeat;
+				background-size: 100%;
+				z-index: 99;
+				
+			}
+			.ee{
+				width: 110px;
+				height: 119px;
+				position: absolute;
+				top: 150px;
+				left: 16px;
+			}
+			.ee img{
+				width: 100%;
+			}
+			.ee2{
+				width: 110px;
+				height: 119px;
+				position: absolute;
+				top: 383px;
+				left: 16px;
+			}
+			.ee2 img{
+				width: 100%;
+			}
+			.iphone{
+				width: 140px;
+				height: 33px;
+				position: absolute;
+				top: 301px;
+				left: 0;
+			}
+			.addiod{
+				width: 140px;
+				height: 33px;
+				position: absolute;
+				top: 340px;
+				left: 0;
+			}
+			.kefu{
+				width: 140px;
+				height: 33px;
+				position: absolute;
+				top: 520px;
+				left: 0;
+			}
+			.sd{
+				width: 100%;
+				/* overflow: hidden; */
+				position: relative;
+				height: 600px;
+			}
+			.sd1{
+				width: 133px;
+				height: 366px;
+				position: absolute;
+				top: 71px;
+				left: 100px;
+				z-index: 2;
+			}
+			.sd1 li{
+				width: 133px;
+				height: 35px;
+				margin-top: 15px;
+				position: relative;
+				overflow: hidden;
+			}
+			.sd1 li p{
+				width: 32px;
+				height: 18px;
+				text-align: center;
+				margin: 0 auto;
+				margin-top: 8px;
+			}
+			.sd1 .bei{
+				width: 133px;
+				height: 35px;
+				background: url(img/gfh_03.png) no-repeat;
+				background-size: 100%;
+				overflow: hidden;
+				position: relative;
+			}
+			.sj{
+				width: 20px;
+				height: 20px;
+				background: url(img/sp.png) no-repeat -681px -176px;
+				    float: left;
+				   
+				    margin-top: 10px;
+					margin-left:25px;
+			}
+			.bei p{
+				width: 32px;
+				height: 18px;
+				text-align: center;
+				margin: 0 auto;
+				margin-top: 8px;
+				
+			}
+			  .bei img{
+				width: 20px;
+				height: 20px;
+				position: absolute;
+				top: 10px;
+				left: 25px;
+				display: block;
+			}
+			.z2{
+				width: 20px;
+				height: 20px;
+				margin-top: 5px;
+			}
+			.z2 img{
+				/* width: 20px;
+				height: 20px;
+				position: absolute;
+				top: 10px;
+				left: 25px; */
+				width: 100%;
+				
+			}
+			
+			.ps{
+				    width: 969px;
+				    height: 590px;
+				    position: absolute;
+				    top: 52px;
+				    right: 0;
+			}
+			.ps video{
+				width:100% ;
+			}
+			.sb2{
+				width: 100%;
+				z-index: 1;
+				position: absolute;
+				bottom: -43px;
+				left: -84px;
+			}
+			.sb2 img{
+				width: 100%;
+			}
+	@media screen and (max-width:1280px) {
+				.zz{
+					width: 1280px;
+					margin: 0 auto;
+				}
+				.sy{
+					width: 1000px;
+					height: 55px;
+					float: right;
+					display: flex;
+					justify-content:space-around;
+					
+				}
+				
+				.donghua video{
+					width: 1280px;
+					
+				}
+				.huaban {
+				    width: 1510px;
+				    height: 800px;
+				    position: absolute;
+				    top: 158px;
+				    left: -13px;
+				    z-index: 3;
+			}
+			.gy{
+				position: absolute;
+				top:170px ;
+				left: 234px;
+			}
+			.xzz{
+				position: absolute;
+				bottom: 53px;
+				left: 423px;
+				z-index: 4;
+			}
+			.datu{
+				width: 226px;
+				    height: 226px;
+				    position: absolute;
+				    top: 420px;
+				    left: 542px;
+					background: url(img/btn.png) no-repeat ;
+					background-size: 100%;
+			}
+			.kq{
+				width: 346px;
+				height: 28px;
+				position: absolute;
+				top: 526px;
+				left: 484px;
+				background: url(img/btn_name.png) no-repeat;
+				background-size: 100%;
+			}
+			}
+			
+		</style>
+		<link rel="stylesheet" href="css/iconfont.css">
+		<script src="js/iconfont.js"></script>
+		<script src="js/new_file.js"></script>
+		<script src="js/swiper-3.4.2.min.js"></script>
+		<link rel="stylesheet" href="css/youxi.css" />
+	
+	</head>
+	<body>
+		
+		<div class="zuida">
+			<div class="huaban">
+				<img data-lazy-src="./img/petal.png" />
+			</div>
+			<!-- //导航上 -->
+			<div class="logo">
+				<div class="dhz">
+					<div class="tx">
+						<a href="https://game.qq.com/">
+						<img data-lazy-src="./img/dsds_02.png" />
+						</a>
+					</div>
+					<div class="xw">
+						<a href="https://x5.qq.com/act/5363/a20210330recruit/index.html?ADTAG=media.buy.baidukeyword.x5pc_u1991627.k222977426644.a46334713079">
+						<img data-lazy-src="./img/aa.jpg" />
+						<div class="xwd">
+							<!-- <img data-lazy-src="./img/aa.jpg" /> -->
+						</div>
+						</a>
+					</div>
+					<div class="you">
+					<div class="cz">
+						<div class="bb">
+						<svg class="icon" aria-hidden="true">
+						  <use xlink:href="#icon-chengchangshouhufangchenmi"></use>
+						</svg>
+						</div>
+						
+						
+						<a href="https://jiazhang.qq.com/parent.html">成长守护平台</a>
+					</div>
+					<div class="rm">
+						<p>腾讯游戏热门排行榜</p>
+						<img data-lazy-src="img/arrow-bottom-copy-copy.png" />
+						<ul>
+							<li>
+								<b>新品端游排行榜 </b> 
+								<span>></span>
+								<div class="top1">
+									<p>1</p>
+									<a href="#">穿越火线</a>
+									
+									<div class="cy">
+										<p>1</p>
+										<a href="javascript:;" class="gu">进入官网</a>
+										<a href="javascript:;" class="xz">下载游戏</a>
+									</div>
+								</div>
+								<div class="top1">
+									<p>2</p>
+									<a href="#">英雄联盟</a>
+									
+									<div class="cy">
+										<p>2</p>
+										<a href="javascript:;" class="gu">进入官网</a>
+										<a href="javascript:;" class="xz">下载游戏</a>
+									</div>
+								</div>
+								<div class="top1">
+									<p>3</p>
+									<a href="#">地下城与勇士</a>
+									
+									<div class="cy">
+										<p>3</p>
+										<a href="javascript:;" class="gu">进入官网</a>
+										<a href="javascript:;" class="xz">下载游戏</a>
+									</div>
+								</div>
+								<div class="top1">
+									<p>4</p>
+									<a href="#">FIFA Online 4</a>
+									
+									<div class="cy">
+										<p>4</p>
+										<a href="javascript:;" class="gu">进入官网</a>
+										<a href="javascript:;" class="xz">下载游戏</a>
+									</div>
+								</div>
+								<div class="top1">
+									<p>5</p>
+									<a href="#">NBA2K</a>
+									
+									<div class="cy">
+										<p>5</p>
+										<a href="javascript:;" class="gu">进入官网</a>
+										<a href="javascript:;" class="xz">下载游戏</a>
+									</div>
+								</div>
+								
+								
+								</li>
+							<li><b>热门端游排行榜</b>
+							<span>></span>
+							<div class="top1">
+								<p>1</p>
+								<a href="#">穿越火线</a>
+								
+								<div class="cy">
+									<p>1</p>
+									<a href="javascript:;" class="gu">进入官网</a>
+									<a href="javascript:;" class="xz">下载游戏</a>
+								</div>
+							</div>
+							<div class="top1">
+								<p>2</p>
+								<a href="#">英雄联盟</a>
+								
+								<div class="cy">
+									<p>2</p>
+									<a href="javascript:;" class="gu">进入官网</a>
+									<a href="javascript:;" class="xz">下载游戏</a>
+								</div>
+							</div>
+							<div class="top1">
+								<p>3</p>
+								<a href="#">地下城与勇士</a>
+								
+								<div class="cy">
+									<p>3</p>
+									<a href="javascript:;" class="gu">进入官网</a>
+									<a href="javascript:;" class="xz">下载游戏</a>
+								</div>
+							</div>
+							<div class="top1">
+								<p>4</p>
+								<a href="#">FIFA Online 4</a>
+								
+								<div class="cy">
+									<p>4</p>
+									<a href="javascript:;" class="gu">进入官网</a>
+									<a href="javascript:;" class="xz">下载游戏</a>
+								</div>
+							</div>
+							<div class="top1">
+								<p>5</p>
+								<a href="#">NBA2K</a>
+								
+								<div class="cy">
+									<p>5</p>
+									<a href="javascript:;" class="gu">进入官网</a>
+									<a href="javascript:;" class="xz">下载游戏</a>
+								</div>
+							</div>
+							
+							
+							</li>
+							<li><b>新品手游排行榜</b>
+							<span>></span>
+							
+							<div class="top1">
+								<p>1</p>
+								<a href="#">妄想山海</a>
+								
+								<div class="cy">
+									<p>1</p>
+									<a href="javascript:;" class="gu">进入官网</a>
+									<a href="javascript:;" class="xz">下载游戏</a>
+								</div>
+							</div>
+							<div class="top1">
+								<p>2</p>
+								<a href="#">和平精英</a>
+								
+								<div class="cy">
+									<p>2</p>
+									<a href="javascript:;" class="gu">进入官网</a>
+									<a href="javascript:;" class="xz">下载游戏</a>
+								</div>
+							</div>
+							<div class="top1">
+								<p>3</p>
+								<a href="#">穿越火线：枪战王者</a>
+								
+								<div class="cy">
+									<p>3</p>
+									<a href="javascript:;" class="gu">进入官网</a>
+									<a href="javascript:;" class="xz">下载游戏</a>
+								</div>
+							</div>
+							<div class="top1">
+								<p>4</p>
+								<a href="#">火影忍者</a>
+								
+								<div class="cy">
+									<p>4</p>
+									<a href="javascript:;" class="gu">进入官网</a>
+									<a href="javascript:;" class="xz">下载游戏</a>
+								</div>
+							</div>
+							
+							</li>
+						</ul>
+					</div>
+					</div>
+					
+					
+				</div>
+				
+			</div>
+			
+			<!-- 导航 -->
+			<div class="dh">
+				<div class="zz">
+						<div class="ty">
+							<img data-lazy-src="img/top_logo。png.png" />
+						</div>
+						<ul class="sy">
+							<a href="javaScript:;"><li class="tt1"></li></a>
+							<a href="javaScript:;"><li class="tt2"></li></a>
+							<a href="javaScript:;"><li class="tt3"></li></a>
+							<a href="javaScript:;"><li  class="tt4"></li></a>
+							<a href="javaScript:;"><li class="tt5"></li></a>
+							<a href="javaScript:;"><li class="tt6"></li></a>
+							<a href="javaScript:;"><li class="tt7"></li></a>
+							<a href="javaScript:;"><li class="tt8"></li></a>
+							<a href="javaScript:;"><li class="tt9"></li></a>
+						</ul>
+					</div>
+			
+			</div>
+			
+			<!-- 导航下 -->
+			
+			<div class="donghuada">
+				
+				<video src="img/top-video.mp4" muted="muted" autoplay="autoplay" loop="loop" ></video>
+				<div class="gf">
+					<img data-lazy-src="img/slogan.png" />
+				</div>
+				<div class="xzz">
+					<div class="ewm">
+					<img data-lazy-src="img/qrcode_down.png" />
+					<a href="javaScript:;" class="pg"></a>
+					<a href="javaScript:;" class="az"></a>
+				</div>
+				<div class="pc">
+					<a href="javaScript:;">
+						<img data-lazy-src="img/pc_down.png"/>
+						</a>
+					<a href="javascript:;"><img data-lazy-src="img/cloud_start.png"/></a>
+				</div>
+				</div>
+				
+			</div>
+			
+			<!-- 江湖快报 -->
+			<div class="spx">
+				<div class="spxz">
+					<div class="jh">
+						
+					</div>
+				</div>
+				<div class="gl">
+					   <div class="as">
+					   <ul class="ld">
+					   	
+					   	<li><img data-lazy-src="img/lunbo01.jpg" /></li>
+					   	<li>
+					   		<img data-lazy-src="img/lunbo02.jpg" />
+					   	</li>
+					   	<li>
+					   		<img data-lazy-src="img/lunbo03.jpg" />
+					   	</li>
+					   	<li>
+					   		<img data-lazy-src="img/lunbo04.jpg" />
+					   	</li>
+					   	<li>
+					   		<img data-lazy-src="img/lunbo05.jpg" />
+					   	</li>
+					   </ul>
+					  
+					   
+					   </div>
+						<ol class="ld2"> </ol>
+					</div>
+					<div class="lby">
+						<div class="gg">
+								<ul class="trr">
+									<li class="zuixin sp">最新</li>
+									<li class="z2"><a><img data-lazy-src="img/nav_line.png"/></a></li>
+									<li class="zuixin">新闻</li>
+									<li class="z2"><a><img data-lazy-src="img/nav_line.png"/></a></li>
+									<li class="zuixin">公告</li>
+									<li class="z2"><a><img data-lazy-src="img/nav_line.png"/></a></li>
+									<li class="zuixin">活动</li>
+									<li class="z2"><a><img data-lazy-src="img/nav_line.png"/></a></li>
+									<li class="zuixin">同人</li>
+									<li class="z2"><a><img data-lazy-src="img/nav_line.png"/></a></li>
+									<li class="zuixin">攻略</li>
+								</ul>
+								<div class="jiahao">
+									<img data-lazy-src="img/more.png" />
+								</div>
+								
+								<div class="bs" style="display: block;">
+									<div class="toutiao">
+										<a href="javascript:;">最新</a>
+										<p>登录送圣绣·素问！神刀斩风云福利新服4月29日开启</p>
+										<span>2021-04-30
+										<i></i>
+										</span>
+									</div>
+									<div class="toutiao">
+										<a href="javascript:;">最新</a>
+										<p>全新八荒门派头像图透来袭！</p>
+										<span>2021-04-30
+										<i></i>
+										</span>
+									</div>
+									<div class="toutiao">
+										<a href="javascript:;">最新</a>
+										<p>碧水青鸾全民普赠！刀刀又要送永久外观了！</p>
+										<span>2021-04-30
+										<i></i>
+										</span>
+									</div>
+									<div class="toutiao">
+										<a href="javascript:;">最新</a>
+										<p>天涯明月刀手游青龙秘宝活动（第二期）规则说明</p>
+										<span>2021-04-28
+										<i></i>
+										</span>
+									</div>
+									<div class="toutiao">
+										<a href="javascript:;">最新</a>
+										<p>4月22日正式服更新公告</p>
+										<span>2021-04-25
+										<i></i>
+										</span>
+									</div>
+									<div class="toutiao">
+										<a href="javascript:;">最新</a>
+										<p>全新镇派武器情报速递！只存于江湖风闻中的绝世武器</p>
+										<span>2021-04-23
+										<i></i>
+										</span>
+									</div>
+									<div class="toutiao">
+										<a href="javascript:;">最新</a>
+										<p>天涯明月刀手游 舞侠出道计划启动！翻跳赢千元豪礼！</p>
+										<span>2021-04-21
+										<i></i>
+										</span>
+									</div>
+								</div>
+								
+								<div class="bs">
+									<div class="toutiao">
+										<a href="javascript:;">新闻</a>
+										<p>从晨夕·杏时茶出发，探寻天衣阁的秘密</p>
+										<span>2021-04-27
+										<i></i>
+										</span>
+									</div>
+									<div class="toutiao">
+										<a href="javascript:;">新闻</a>
+										<p>登录送圣绣·素问！神刀斩风云福利新服4月29日开启</p>
+										<span>2021-04-30
+										<i></i>
+										</span>
+									</div>
+									<div class="toutiao">
+										<a href="javascript:;">新闻</a>
+										<p>全新镇派武器情报速递！只存于江湖风闻中的绝世武器</p>
+										<span>2021-04-19
+										<i></i>
+										</span>
+									</div>
+									<div class="toutiao">
+										<a href="javascript:;">新闻</a>
+										<p>CPDD？老手Q1？刀刀黑话知多少，看完直呼好家伙！</p>
+										<span>2021-04-10
+										<i></i>
+										</span>
+									</div>
+									<div class="toutiao">
+										<a href="javascript:;">新闻</a>
+										<p>神刀来了！天刀手游春季资料片今日上线</p>
+										<span>2021-04-09
+										<i></i>
+										</span>
+									</div>
+									<div class="toutiao">
+										<a href="javascript:;">公告</a>
+										<p>4月29日正式服更新公告</p>
+										<span>2021-04-23
+										<i></i>
+										</span>
+									</div>
+									<div class="toutiao">
+										<a href="javascript:;">公告</a>
+										<p>碧水青鸾全民普赠！刀刀又要送永久外观了！</p>
+										<span>2021-04-21
+										<i></i>
+										</span>
+									</div>
+								</div>
+								
+								<div class="bs">
+									<div class="toutiao">
+										<a href="javascript:;">公告</a>
+										<p>天涯明月刀手游青龙秘宝活动（第二期）规则说明</p>
+										<span>2021-04-30
+										<i></i>
+										</span>
+									</div>
+									<div class="toutiao">
+										<a href="javascript:;">公告</a>
+										<p>4月22日正式服更新公告</p>
+										<span>2021-04-30
+										<i></i>
+										</span>
+									</div>
+									<div class="toutiao">
+										<a href="javascript:;">公告</a>
+										<p>天涯明月刀手游合服计划（第二批）</p>
+										<span>2021-04-30
+										<i></i>
+										</span>
+									</div>
+									<div class="toutiao">
+										<a href="javascript:;">公告</a>
+										<p>天涯明月刀手游合服正式开启（第一批）</p>
+										<span>2021-04-28
+										<i></i>
+										</span>
+									</div>
+									<div class="toutiao">
+										<a href="javascript:;">公告</a>
+										<p>2021年天涯明月刀手游商城上架礼包概率公示</p>
+										<span>2021-04-25
+										<i></i>
+										</span>
+									</div>
+									<div class="toutiao">
+										<a href="javascript:;">最新</a>
+										<p>全新镇派武器情报速递！只存于江湖风闻中的绝世武器</p>
+										<span>2021-04-23
+										<i></i>
+										</span>
+									</div>
+									<div class="toutiao">
+										<a href="javascript:;">最新</a>
+										<p>天涯明月刀手游 舞侠出道计划启动！翻跳赢千元豪礼！</p>
+										<span>2021-04-21
+										<i></i>
+										</span>
+									</div>
+								</div>
+								<div class="bs">
+									<div class="toutiao">
+										<a href="javascript:;">活动</a>
+										<p>全新八荒门派头像图透来袭！</p>
+										<span>2021-04-30
+										<i></i>
+										</span>
+									</div>
+									<div class="toutiao">
+										<a href="javascript:;">活动</a>
+										<p>天涯明月刀手游 舞侠出道计划启动！翻跳赢千元豪礼！</p>
+										<span>2021-04-30
+										<i></i>
+										</span>
+									</div>
+									<div class="toutiao">
+										<a href="javascript:;">活动</a>
+										<p>天刀舞侠出道计划启动，翻跳春时舞赢千元豪礼！！</p>
+										<span>2021-04-30
+										<i></i>
+										</span>
+									</div>
+									<div class="toutiao">
+										<a href="javascript:;">活动</a>
+										<p>天涯明月刀手游【客栈原创作者】认证招募启事</p>
+										<span>2021-04-28
+										<i></i>
+										</span>
+									</div>
+									<div class="toutiao">
+										<a href="javascript:;">活动</a>
+										<p>云中三希堂·方寸之境风景大赏，梦境中的画面出现了！</p>
+										<span>2021-04-25
+										<i></i>
+										</span>
+									</div>
+									<div class="toutiao">
+										<a href="javascript:;">活动</a>
+										<p>把国风穿在身上——用刀刀打开文物同款染色方案！</p>
+										<span>2021-04-23
+										<i></i>
+										</span>
+									</div>
+									<div class="toutiao">
+										<a href="javascript:;">活动</a>
+										<p>【春之洛神】活动获奖名单公示</p>
+										<span>2021-04-21
+										<i></i>
+										</span>
+									</div>
+								</div>
+								<div class="bs">
+									<div class="toutiao">
+										<a href="javascript:;">同人</a>
+										<p>资料片爆料丨史诗级话本登场，决战武林第一人！</p>
+										<span>2021-04-30
+										<i></i>
+										</span>
+									</div>
+									<div class="toutiao">
+										<a href="javascript:;">同人</a>
+										<p>【天涯明月刀手游首届插画大赛】结果公布！快来看看有没有你吧！</p>
+										<span>2021-04-30
+										<i></i>
+										</span>
+									</div>
+									<div class="toutiao">
+										<a href="javascript:;">同人</a>
+										<p>天刀首款互动小说《孔雀翎》正式上线！探寻孔雀翎背后的谜团！</p>
+										<span>2021-04-30
+										<i></i>
+										</span>
+									</div>
+									<div class="toutiao">
+										<a href="javascript:;">同人</a>
+										<p>【同人歌曲】剑荡八荒之天涯再聚</p>
+										<span>2021-04-28
+										<i></i>
+										</span>
+									</div>
+									<div class="toutiao">
+										<a href="javascript:;">同人</a>
+										<p>天刀手游首届插画大赛 海量豪礼等你赢</p>
+										<span>2021-04-25
+										<i></i>
+										</span>
+									</div>
+									<div class="toutiao">
+										<a href="javascript:;">同人</a>
+										<p>天刀手游官方内容团招募开启</p>
+										<span>2021-04-23
+										<i></i>
+										</span>
+									</div>
+									<div class="toutiao">
+										<a href="javascript:;">同人</a>
+										<p>天刀内容团招募公示</p>
+										<span>2021-04-21
+										<i></i>
+										</span>
+									</div>
+								</div>
+								<div class="bs">
+									<div class="toutiao">
+										<a href="javascript:;">攻略</a>
+										<p>史上最强白嫖攻略，来看各种玩法赠送5w+绑点如何获取</p>
+										<span>2021-04-30
+										<i></i>
+										</span>
+									</div>
+									<div class="toutiao">
+										<a href="javascript:;">攻略</a>
+										<p>【版本速递】碧水青鸾时装免费送！碎片任务提前看！</p>
+										<span>2021-04-30
+										<i></i>
+										</span>
+									</div>
+									<div class="toutiao">
+										<a href="javascript:;">攻略</a>
+										<p>浮生-短歌全新染色数据速递，轻松get超甜情侣染色（全体型）</p>
+										<span>2021-04-30
+										<i></i>
+										</span>
+									</div>
+									<div class="toutiao">
+										<a href="javascript:;">攻略</a>
+										<p>【版本解析】限定外观碧水青鸾、五一登录礼包等多重福利免费拿</p>
+										<span>2021-04-28
+										<i></i>
+										</span>
+									</div>
+									<div class="toutiao">
+										<a href="javascript:;">攻略</a>
+										<p>86级预留资源一览，共可提升近1000点功力值</p>
+										<span>2021-04-25
+										<i></i>
+										</span>
+									</div>
+									<div class="toutiao">
+										<a href="javascript:;">攻略</a>
+										<p>天刀手游【天命赐芳华】版本定档5.24！喜迎IP六周年</p>
+										<span>2021-04-23
+										<i></i>
+										</span>
+									</div>
+									<div class="toutiao">
+										<a href="javascript:;">攻略</a>
+										<p>绑点不够用？来看每周5000+绑点如何获取</p>
+										<span>2021-04-21
+										<i></i>
+										</span>
+									</div>
+								</div>
+						</div>
+						
+						<div class="hd">
+							<a href="javascript:;"></a>
+							<a href="javascript:;"></a>
+							<a href="javascript:;"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- 八荒门派 -->
+			<div class="bh">
+				<div class="bhz">
+					<div class="bhzz"></div>
+				</div>
+				
+				<div class="sd">
+							<ul class="sd1">
+								<li class="bei">
+									<div class="sj"></div>
+									<img data-lazy-src="img/f815b05ad4b2794c6f749c269c4ec24.png"  />
+									<p>太白</p>
+								</li>
+								<li>
+									<div class="sj"></div>
+									<img data-lazy-src="img/f815b05ad4b2794c6f749c269c4ec24.png" style="display: none;"/>
+									<p>神威</p>
+								</li>
+								<li>
+									<div class="sj"></div>
+									<img data-lazy-src="img/f815b05ad4b2794c6f749c269c4ec24.png" style="display: none;" />
+									<p>天香</p>
+								</li>
+								<li>
+									<div class="sj"></div>
+									<img data-lazy-src="img/f815b05ad4b2794c6f749c269c4ec24.png" style="display: none;" />
+									<p>唐门</p>
+								</li>
+								<li>
+									<div class="sj"></div>
+									<img data-lazy-src="img/f815b05ad4b2794c6f749c269c4ec24.png" style="display: none;"/>
+									<p>丐帮</p>
+								</li>
+								<li>
+									<div class="sj"></div>
+									<img data-lazy-src="img/f815b05ad4b2794c6f749c269c4ec24.png" style="display: none;" />
+									<p>移花</p>
+								</li>
+								<li>
+									<div class="sj"></div>
+									<img data-lazy-src="img/f815b05ad4b2794c6f749c269c4ec24.png"style="display: none;" />
+									<p>真武</p>
+								</li>
+								<li>
+									<div class="sj"></div>
+									<img data-lazy-src="img/f815b05ad4b2794c6f749c269c4ec24.png" style="display: none;"/>
+									<p>神刀</p>
+								</li>
+							</ul>
+							
+							
+							<div class="ps">
+								<video src="img/tab_v0.mp4" muted="muted" autoplay="autoplay" loop="loop"></video>
+								
+							</div>
+							<div class="sb2">
+								<img data-lazy-src="img/tab_01.png" />
+							</div>
+						</div>
+				
+				</div>
+				
+				
+				<!-- 游戏攻略 -->
+				<div class="yg">
+					<div class="ygz">
+						<div class="ygzz"></div>
+						<div class="qiyu">
+							<ul class="hh">
+								<li >
+									<a href="javascript:;"class="yuo">最新</a>
+									
+								</li>
+								<span>|</span>
+								<li>
+									<a href="javascript:;">新手引导</a>
+								</li>
+								<span>|</span>
+								<li>
+									<a href="javascript:;">任务</a>
+									
+								</li>
+								<span>|</span>
+								<li>
+									<a href="javascript:;">话本</a>
+									
+								</li>
+								<span>|</span>
+								<li>
+									<a href="javascript:;">PVP</a>
+									
+								</li>
+								<span>|</span>
+								<li>
+									<a href="javascript:;" >属性</a>
+									
+								</li>
+							</ul>
+							<div class="xian"></div>
+							
+							<div class="qiehuan"  style="display: block;">
+								
+								<div class="yi">
+									<div class="yii">
+										<a href="javascript:;">攻略</a>
+									<p>【天衣预告】时装党的盛宴、天衣惠选即将大更新</p>
+									<span style="font-size: 13px; color: #666666;margin-left: 44px;">2021-04-30</span>
+									</div>
+									<div class="yii">
+										<a href="javascript:;">攻略</a>
+									<p>【天衣预告】时装党的盛宴、天衣惠选即将大更新</p>
+									<span style="font-size: 13px; color: #666666;margin-left: 44px;">2021-04-30</span>
+									</div>
+								
+								</div>
+								<div class="yi">
+									<div class="yii">
+										<a href="javascript:;">攻略</a>
+									<p>锦鲤任务五行藏珍·火流程详解</p>
+									<span style="font-size: 13px; color: #666666;margin-left: 44px;">2021-04-30</span>
+									</div>
+									<div class="yii">
+										<a href="javascript:;">攻略</a>
+									<p>【版本速递】碧水青鸾时装免费送！碎片任务提前看</p>
+									<span style="font-size: 13px; color: #666666;margin-left: 44px;">2021-04-30</span>
+									</div>
+								
+								</div>
+								<div class="yi">
+									<div class="yii">
+										<a href="javascript:;">攻略</a>
+									<p>【更新速读】喜迎五一小长假，精彩活动今开启</p>
+									<span style="font-size: 13px; color: #666666;margin-left: 44px;">2021-04-30</span>
+									</div>
+									<div class="yii">
+										<a href="javascript:;">攻略</a>
+									<p>浮生-短歌全新染色数据速递，轻松get超甜情侣染色（全体型）</p>
+									<span style="font-size: 13px; color: #666666;margin-left: 44px;">2021-04-30</span>
+									</div>
+								
+								</div>
+								
+							</div>
+							
+							<div class="qiehuan">
+								
+								<div class="yi">
+									<div class="yii">
+										<a href="javascript:;">新手引导 </a>
+									<p>【天衣预告】时装党的盛宴、天衣惠选即将大更新</p>
+									<span style="font-size: 13px; color: #666666;margin-left: 44px;">2021-04-30</span>
+									</div>
+									<div class="yii">
+										<a href="javascript:;">新手引导</a>
+									<p>【天衣预告】时装党的盛宴、天衣惠选即将大更新</p>
+									<span style="font-size: 13px; color: #666666;margin-left: 44px;">2021-04-30</span>
+									</div>
+								
+								</div>
+								<div class="yi">
+									<div class="yii">
+										<a href="javascript:;">新手引导</a>
+									<p>锦鲤任务五行藏珍·火流程详解</p>
+									<span style="font-size: 13px; color: #666666;margin-left: 44px;">2021-04-30</span>
+									</div>
+									<div class="yii">
+										<a href="javascript:;">新手引导</a>
+									<p>【版本速递】碧水青鸾时装免费送！碎片任务提前看</p>
+									<span style="font-size: 13px; color: #666666;margin-left: 44px;">2021-04-30</span>
+									</div>
+								
+								</div>
+								<div class="yi">
+									<div class="yii">
+										<a href="javascript:;">新手引导</a>
+									<p>【更新速读】喜迎五一小长假，精彩活动今开启</p>
+									<span style="font-size: 13px; color: #666666;margin-left: 44px;">2021-04-30</span>
+									</div>
+									<div class="yii">
+										<a href="javascript:;">新手引导</a>
+									<p>浮生-短歌全新染色数据速递，轻松get超甜情侣染色（全体型）</p>
+									<span style="font-size: 13px; color: #666666;margin-left: 44px;">2021-04-30</span>
+									</div>
+								
+								</div>
+								
+							</div>
+							
+							
+							
+							
+							<div class="qiehuan">
+								
+								<div class="yi">
+									<div class="yii">
+										<a href="javascript:;">任务 </a>
+									<p>沉浸江湖故事，新奇遇解锁与开启条件一览</p>
+									<span style="font-size: 13px; color: #666666;margin-left: 44px;">2021-04-30</span>
+									</div>
+									<div class="yii">
+										<a href="javascript:;">任务 </a>
+									<p>【逆天改命】柳扶风天命攻略</p>
+									<span style="font-size: 13px; color: #666666;margin-left: 44px;">2021-04-30</span>
+									</div>
+								
+								</div>
+								<div class="yi">
+									<div class="yii">
+										<a href="javascript:;">任务 </a>
+									<p>天上白玉京，十二楼五城，全新主线内容简析</p>
+									<span style="font-size: 13px; color: #666666;margin-left: 44px;">2021-04-30</span>
+									</div>
+									<div class="yii">
+										<a href="javascript:;">任务 </a>
+									<p>【逆天改命】胡小宝：善良之人应当被人温柔以待</p>
+									<span style="font-size: 13px; color: #666666;margin-left: 44px;">2021-04-30</span>
+									</div>
+								
+								</div>
+								<div class="yi">
+									<div class="yii">
+										<a href="javascript:;">任务 </a>
+									<p>五大奇遇任务简析，让你体验最真实的天刀江湖</p>
+									<span style="font-size: 13px; color: #666666;margin-left: 44px;">2021-04-30</span>
+									</div>
+									<div class="yii">
+										<a href="javascript:;">任务 </a>
+									<p>江湖奇遇知多少：教你如何拆穿西域人的骗术</p>
+									<span style="font-size: 13px; color: #666666;margin-left: 44px;">2021-04-30</span>
+									</div>
+								
+								</div>
+								
+							</div>
+							
+							
+							
+							
+							
+							<div class="qiehuan">
+								
+								<div class="yi">
+									<div class="yii">
+										<a href="javascript:;">话本 </a>
+									<p>【视频】天涯伴我行第36期：10人本心剑战境4BOSS合集攻略</p>
+									<span style="font-size: 13px; color: #666666;margin-left: 44px;">2021-04-30</span>
+									</div>
+									<div class="yii">
+										<a href="javascript:;">话本</a>
+									<p>71级普通话本夜探皇宫打法指南，全新打造材料掉落</p>
+									<span style="font-size: 13px; color: #666666;margin-left: 44px;">2021-04-30</span>
+									</div>
+								
+								</div>
+								<div class="yi">
+									<div class="yii">
+										<a href="javascript:;">话本</a>
+									<p>71级普通话本成就完成攻略，这颗属性丹你必不能错过</p>
+									<span style="font-size: 13px; color: #666666;margin-left: 44px;">2021-04-30</span>
+									</div>
+									<div class="yii">
+										<a href="javascript:;">话本</a>
+									<p>三分钟备战全新话本，“夜探皇宫”完美通关及特殊成就最详完成攻略</p>
+									<span style="font-size: 13px; color: #666666;margin-left: 44px;">2021-04-30</span>
+									</div>
+								
+								</div>
+								<div class="yi">
+									<div class="yii">
+										<a href="javascript:;">话本</a>
+									<p>【视频】天涯建筑学院Vol09：用最少的家具种类打造的和谐意境美</p>
+									<span style="font-size: 13px; color: #666666;margin-left: 44px;">2021-04-30</span>
+									</div>
+									<div class="yii">
+										<a href="javascript:;">话本</a>
+									<p>51级金装副本必修课，快速解锁势如破竹成就</p>
+									<span style="font-size: 13px; color: #666666;margin-left: 44px;">2021-04-30</span>
+									</div>
+								
+								</div>
+								
+							</div>
+							
+							
+							<div class="qiehuan">
+								
+								<div class="yi">
+									<div class="yii">
+										<a href="javascript:;">PVP</a>
+									<p>【视频】天涯伴我行第39期：心剑战境冶儿、药师通关攻略</p>
+									<span style="font-size: 13px; color: #666666;margin-left: 44px;">2021-04-30</span>
+									</div>
+									<div class="yii">
+										<a href="javascript:;">PVP</a>
+									<p>【视频】天涯伴我行第35期：把真武培养成坦克？防御属性面板测评</p>
+									<span style="font-size: 13px; color: #666666;margin-left: 44px;">2021-04-30</span>
+									</div>
+								
+								</div>
+								<div class="yi">
+									<div class="yii">
+										<a href="javascript:;">PVP</a>
+									<p>【视频】天涯伴我行第37期：全职业教学 唐门战神威</p>
+									<span style="font-size: 13px; color: #666666;margin-left: 44px;">2021-04-30</span>
+									</div>
+									<div class="yii">
+										<a href="javascript:;">PVP</a>
+									<p>【视频】天涯伴我行第33期：真武新版本强不强？连招干货教学走起</p>
+									<span style="font-size: 13px; color: #666666;margin-left: 44px;">2021-04-30</span>
+									</div>
+								
+								</div>
+								<div class="yi">
+									<div class="yii">
+										<a href="javascript:;">PVP</a>
+									<p>【视频】天涯伴我行第38期：全职业教学 真武论剑进阶教学</p>
+									<span style="font-size: 13px; color: #666666;margin-left: 44px;">2021-04-30</span>
+									</div>
+									<div class="yii">
+										<a href="javascript:;">PVP</a>
+									<p>【视频】天涯伴我行第31期：数据党实测分析 洗练属性选择今日揭秘</p>
+									<span style="font-size: 13px; color: #666666;margin-left: 44px;">2021-04-30</span>
+									</div>
+								
+								</div>
+								
+							</div>
+							
+							
+							
+							
+							
+							<div class="qiehuan">
+								
+								<div class="yi">
+									<div class="yii">
+										<a href="javascript:;">属性</a>
+									<p>洗练第三孔开放及经脉新增，功力提升全面解析</p>
+									<span style="font-size: 13px; color: #666666;margin-left: 44px;">2021-04-30</span>
+									</div>
+									<div class="yii">
+										<a href="javascript:;">属性</a>
+									<p>提升属性强化技能，珑铸系统效果解析</p>
+									<span style="font-size: 13px; color: #666666;margin-left: 44px;">2021-04-30</span>
+									</div>
+								
+								</div>
+								<div class="yi">
+									<div class="yii">
+										<a href="javascript:;">属性</a>
+									<p>真武刷本帮战团队定位分析及武学套路使用推荐</p>
+									<span style="font-size: 13px; color: #666666;margin-left: 44px;">2021-04-30</span>
+									</div>
+									<div class="yii">
+										<a href="javascript:;">属性</a>
+									<p>真武砭石分析推荐，让你轻松玩转新职业</p>
+									<span style="font-size: 13px; color: #666666;margin-left: 44px;">2021-04-30</span>
+									</div>
+								
+								</div>
+								<div class="yi">
+									<div class="yii">
+										<a href="javascript:;">属性</a>
+									<p>水墨江湖真武写意，看新门派真武琅纹如何搭配</p>
+									<span style="font-size: 13px; color: #666666;margin-left: 44px;">2021-04-30</span>
+									</div>
+									<div class="yii">
+										<a href="javascript:;">属性</a>
+									<p>转职系统即将开启，转职步骤及注意事项一览</p>
+									<span style="font-size: 13px; color: #666666;margin-left: 44px;">2021-04-30</span>
+									</div>
+								
+								</div>
+								
+							</div>
+						</div>
+						<div class="xia1">
+							<a href="javascript:;">
+								<img data-lazy-src="img/gonglue_gg1.jpg" />
+							</a>
+							<a href="javascript:;">
+								<img data-lazy-src="img/gonglue_gg2.jpg" />
+							</a>
+							<a href="javascript:;">
+								<img data-lazy-src="img/gonglue_gg3.jpg" />
+							</a>
+						</div>
+						
+					</div>
+					
+				</div>
+				
+		
+		
+		
+		
+			<!-- 天刀故事站 -->
+			<div class="td">
+				<div class="tou"></div>
+				<div class="datu"></div>
+				<div class="kq"></div>
+			</div>
+			
+			
+			<!-- 有爱同人 -->
+			<div class="ya">
+				<div class="yaz">
+					<div class="yazz"></div>
+					<div class="ml">
+						<div class="ml1">
+							<img data-lazy-src="img/tr1.jpg" class="ml11" />
+							<div class="ml2">
+								<i>
+								<img data-lazy-src="img/arrow.png" />
+							</i>
+							<h5>眠狼</h5>
+							<br />
+							<div class="xian2"></div>
+							<p>胭脂泪，相留醉，几时重。自是人生长恨水长东。</p>
+							</div>
+							
+						</div>
+						
+						<div class="jiahao2">
+							<img data-lazy-src="img/more.png" />
+						</div>
+						<a href="javascript:;">MORE </a>
+						<div class="sg">
+							<img data-lazy-src="img/tr2.jpg" class="sbb" />
+							<div class="sg2">
+							<span>
+								<img data-lazy-src="img/arrow.png" />
+							</span>
+							<h5>山魂</h5>
+							<br />
+							<div class="xian3"></div>
+							<p>塞上行·弦鼓一声双袖举</p>
+						</div>
+						</div>
+						<div class="sg">
+							<img data-lazy-src="img/tr3.jpg"  class="sbb" />
+							<div class="sg2">
+								<span>
+									<img data-lazy-src="img/arrow.png" />
+								</span>
+								<h5>山魂</h5>
+								<br />
+								<div class="xian3"></div>
+								<p>洛神赋·灼若芙蕖出渌波</p>
+							</div>
+						</div>
+						<div class="sg">
+							<img data-lazy-src="img/tr4.jpg"   class="sbb"/>
+							<div class="sg2">
+								<span>
+									<img data-lazy-src="img/arrow.png" />
+								</span>
+								<h5>山魂</h5>
+								<br />
+								<div class="xian3"></div>
+								<p>光音天·缥缈飞天十二台</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+			
+			<!-- 游戏特色 -->
+			<div class="te">
+				<div class="tes">
+					<div class="tes1"></div>
+					<div class="event2">
+					
+					    <div class="event2-con">
+					        <div class="swiper-container event2-swiper">
+					            <div class="swiper-wrapper">
+					              
+					                <div class="swiper-slide"><img data-lazy-src="img/te1.jpg" width="900" height="433" /></div>
+					                <div class="swiper-slide"><img data-lazy-src="img/te2.jpg" width="900" height="433" /></div>
+									<div class="swiper-slide"><img data-lazy-src="img/te4.jpg" width="900" height="433" /></div>
+					                <div class="swiper-slide"><img data-lazy-src="img/te5.jpg" width="900" height="433" /></div>
+					                <div class="swiper-slide"><img data-lazy-src="img/te6.jpg" width="900" height="433" /></div>
+					                <div class="swiper-slide"><img data-lazy-src="img/te7.jpg" width="900" height="433" /></div>
+					                <div class="swiper-slide"><img data-lazy-src="img/te8.jpg" width="900" height="433" /></div>
+					                
+					            </div>
+					        </div>
+					        <div class="swiper-pagination event2-pagination"></div>
+					        <!-- 如果需要导航按钮 -->
+					        <div class="swiper-button-prev event2-swiper-prev"></div>
+					        <div class="swiper-button-next event2-swiper-next"></div>
+					    </div>
+					</div>
+				</div>
+				
+				</div>
+			
+		
+		
+			<!-- 试听大赏 -->
+			<div class="st">
+				<div class="stt">
+					<div class="stt1"></div>
+					<div class="stt2">
+						<a href="javascript:;" class="stt21">
+							<img data-lazy-src="img/1.jpg" />
+						</a>
+						<a href="javascript:;" class="stt22">
+							<img data-lazy-src="img/113.jpg" />
+						</a>
+						<a href="javascript:;" class="stt23">
+							<img data-lazy-src="img/114.jpg" />
+						</a>
+						<a href="javascript:;" class="stt24">
+							<img data-lazy-src="img/115.jpg" />
+						</a>
+						<a href="javascript:;" class="stt25">
+							<img data-lazy-src="img/116.jpg" />
+							<i></i>
+							<span></span>
+						</a>
+						<a href="javascript:;" class="stt26">
+							<img data-lazy-src="img/117.jpg" />
+						</a>
+						<a href="javascript:;" class="stt27">
+							<img data-lazy-src="img/118.jpg" />
+						</a>
+						<a href="javascript:;" class="stt28">
+							<img data-lazy-src="img/119.jpg" />
+						</a>
+						<a href="javascript:;" class="stt29">
+							<img data-lazy-src="img/1191.jpg" />
+							<i></i>
+							<span></span>
+						</a>
+						<a href="javascript:;" class="stt291">
+							<img data-lazy-src="img/1192.jpg" />
+							<i></i>
+							<span></span>
+						</a>
+						<a href="javascript:;" class="stt292">
+							<img data-lazy-src="img/1193.jpg" />
+						</a>
+						<a href="javascript:;" class="stt293">
+							<img data-lazy-src="img/1194.jpg" />
+						</a>
+						<a href="javascript:;" class="stt294">
+							<img data-lazy-src="img/1195.jpg" />
+							<i></i>
+							<span></span>
+						</a>
+						
+					</div>
+				</div>
+			</div>
+		
+		
+		
+		
+				<!-- 渠道 -->
+			<div class="qd">
+				<div class="qdz">
+					<a href="javascript:;">
+						<b>手游微信</b>
+					</a>
+					<a href="javascript:;">
+						<b>官方微博</b>
+					</a>
+					<a href="javascript:;">
+						<b>手游论坛</b>
+					</a>
+					<a href="javascript:;">
+						<b>手游Q群</b>
+					</a>
+					<a href="javascript:;">
+						<b>手游部落</b>
+					</a>
+					<a href="javascript:;">
+						<b>手游B站</b>
+					</a>
+				</div>
+			</div>
+		
+		
+		
+		<!-- 黑字 -->
+		<div class="zi">
+		<div class="ziz">
+			<p>本网络游戏适合年满14周岁以上的用户使用；请您确定已如实进行实名注册；为了您的健康，请合理控制游戏时间。</p>
+			<p>健康游戏公告:抵制不良游戏拒绝盗版游戏注意自我保护谨防受骗上当适度游戏益脑沉迷游戏伤身合理安排时间享受健康生活</p>
+		</div>
+		</div>
+		
+		
+		
+		
+		<!-- 底部 -->
+		<div class="dibu">
+			<div class="dibuz">
+				<div class="logo2">
+					<div >
+						<img data-lazy-src="img/foot-dark.png" style="width: 100%;"/>
+					</div>
+					<div>
+						<img data-lazy-src="img/30202caf05b5e02a207421b8ca473d5.png"style="width: 100%;" />
+					</div>
+				</div>
+				<ul class="xs">
+					<li>腾讯互动娱乐|服务条款|隐私保护指引|儿童隐私保护指引|腾讯游戏招聘|腾讯游戏客服|游戏列表|广告服务及商务合作</li>
+					<li>腾讯公司版权所有</li>
+					<li>COPYRIGHT © 1998 - 2021 TENCENT. ALL RIGHTS RESERVED.</li>
+					<li>工商网监电子标识 粤网文[2020]3396-195号（署）网出证（粤）字第054号</li>
+					<li>批准文号：国新出审[2020]509 号出版物号：ISBN 978-7-498-07453-9 全国文化市场统一举报电话：12318</li>
+				</ul>
+			</div>
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		<!-- 固定定位 -->
+		<div class="gd">
+			<a href="javascript:;"  class="guanbi"></a>
+			<a href="javascript:;" class="lianjie"></a>
+		</div>
+	
+	
+	
+		<div class="gd2">
+			<div class="ee">
+				<img data-lazy-src="img/qrcode_down.png" />
+			</div>
+			<div class="ee2">
+				<img data-lazy-src="img/qrcode_gzh.png" />
+			</div>
+			<a href="javascript:;"  class="iphone"></a>
+			<a href="javascript:;" class="addiod"></a>
+			<a href="javascript:;" class="kefu"></a>
+		</div>
+	
+		</div>
+		
+	
+	<script>
+		
+		var top1 = document.querySelector('.rm').querySelectorAll('.top1');
+		var cy = document.querySelector('.cy');
+			for(var i= 0; i < top1.length;i++){
+				top1[i].onmouseover = function(){
+						this.children[2].style.display='none'; 
+						console.log(i)
+							this.children[2].style.display='block';
+							// this.children[2].style.background='url(/img/img'+i+'.jpg)';
+							
+						
+			}
+			
+			}
+			for(var i= 0; i < top1.length;i++){
+				top1[i].onmouseout=function(){
+					this.children[2].style.display='block';
+					
+						this.children[2].style.display='none';
+				}
+				}
+	</script>
+		
+		<script>
+			
+			var ul=document.querySelector('.ld');
+			var li1=document.querySelector('.ld').querySelectorAll('li');
+			var ol=document.querySelector('ol');
+			var oli=document.querySelector('ol').querySelectorAll('li');
+			
+				
+			
+			for(var i=0; i<li1.length;i++){
+				var jj=document.createElement('li');
+				ol.appendChild(jj);
+			
+				ol.children[i].addEventListener('click',function(){
+					for(var i=0;i<ol.children.length;i++){
+						ol.children[i].className='';
+						this.className= 'bj';
+						ol.children[i].setAttribute('date-index',i);
+					}
+					var index= this.getAttribute('date-index');
+					
+					db(ul,-index*li1[0].offsetWidth);
+				})
+				
+			}
+			ol.children[0].className='bj';
+			var num=0;
+			setInterval(function(){
+				num++;
+				if(num==5){
+					num=0;
+				}
+				for(var i=0;i<ol.children.length;i++){
+					ol.children[i].className='';
+					this.className= 'bj';
+					ol.children[i].setAttribute('date-index',i);
+				}
+				
+				db(ul,-num*li1[0].offsetWidth);
+				ol.children[num].className='bj';
+			},3000)
+			
+			var first=ul.children[0].cloneNode(true);
+			ul.appendChild(first);
+			
+			
+			
+			
+		</script>
+	
+	
+	
+	<script>
+		var qiehuan=document.querySelectorAll('.zuixin');
+	
+		var nr=document.querySelector('.gg').querySelectorAll('.bs');
+		for(var i=0;i<qiehuan.length;i++){       //把导航的所有div的框遍历出来
+			qiehuan[i].onclick=function(){       //给导航里的每一个div一个点击事件
+				for(var i=0;i<qiehuan.length;i++){    //点击再把导航的所有div的框遍历出来
+					qiehuan[i].className='';          //把他们所有类名都删除
+					qiehuan[i].setAttribute('data-index',i);      //增加自定义属性data-  给五个div设置自定义属性
+																				// 以数值的形式出现成为下面的索引
+				}
+				this.className='sp';     //把类名赋给当前点击的div
+				
+				
+				var dian=this.getAttribute('data-index');     //获取自定义属性  让两个联系到一起
+				for(var i=0;i<nr.length;i++){        //遍历一下要切换的框
+					nr[i].style.display='none';    // 点击的时候让前一个消失
+				}
+				nr[dian].style.display='block';   //让当前点击的框出现
+			}
+			
+		}
+	</script>	
+	
+	
+	
+	<script>
+	var lil=document.querySelector('.sd1').querySelectorAll('li');
+	var imgg=document.querySelector('.sd1').querySelectorAll('img');
+	var ps=document.querySelector('.ps').querySelector('video');
+	var sb2=document.querySelector('.sb2').querySelector('img');
+	for( var i=0; i<lil.length;i++){
+		lil[i].onclick=function(){
+			for( var i=0; i<lil.length;i++){
+				lil[i].className='';
+				lil[i].children[1].style.display='none';
+				lil[i].setAttribute('data-index',i);
+			}
+			var lj=this.getAttribute('data-index');
+			this.className='bei';
+			this.children[1].style.display='block';
+			ps.src=  'img/tab_v'+lj+'.mp4';
+			sb2.src='img/tab_0'+lj+'.png';
+		}
+	}
+	</script>
+	
+	
+	<!-- <script>
+		var wd=document.querySelector('.wd').querySelectorAll('div');
+		for( var i=0; i<wd.length;i++){
+		wd[i].onclick=function(){
+			alert('角色开发中敬请期待！');
+		}
+		}
+	</script> -->
+	
+	
+	
+	
+	<script>
+		var hh=document.querySelector('.hh').querySelectorAll('a');
+		console.log(hh)
+		var qh =document.querySelectorAll('.qiehuan');
+		for(var i=0; i<hh.length;i++){
+			hh[i].onclick=function(){
+				for(var i=0; i<hh.length;i++){
+					hh[i].className='';
+					hh[i].setAttribute('data-index',i);
+				}
+				this.className='yuo';
+				var dds=this.getAttribute('data-index');
+				for(var i=0;i<qh.length;i++){
+					qh[i].style.display='none';
+				}
+				qh[dds].style.display='block';
+			}
+		}
+		
+		
+	</script>
+	
+	
+	<script>
+	
+	      
+	    // 轮播图初始化
+	    var mySwiper = new Swiper('.event2-swiper', {
+	        effect: 'coverflow',
+	        watchSlidesProgress: true,
+	        slidesPerView: 'auto',
+	        centeredSlides: true,
+	        speed: 1500,
+	        loop: true,
+	        loopedSlides: 7,
+	        lazyLoading: true,
+	        nextButton: '.event2-swiper-next',
+	        prevButton: '.event2-swiper-prev',
+	        pagination: '.event2-pagination',
+	        threshold: 80,
+	        coverflow: {
+	            rotate: 0,
+	            depth: 300,
+	            slideShadows: false
+	        }
+	    })
+	  
+	</script>
+	
+	
+	<script>
+		var guanbi=document.querySelector('.guanbi')
+		var ff=document.querySelector('.gd')
+		guanbi.onclick=function(){
+			ff.style.display='none';
+		}
+		
+	</script>
+
+<script src="js/jquery-1.12.4.js"></script>
+
+<script src="js/EasyLazyload.min.js"></script>
+	
+	<script>
+		
+		lazyLoadInit({
+		offsetBottom:0,
+		offsetTopm:0,
+		showTime:1100,
+		onLoadBackEnd:function(i,e){
+			console.log("onLoadBackEnd:"+i);
+		}
+		,onLoadBackStart:function(i,e){
+			console.log("onLoadBackStart:"+i);
+	}
+});
+	</script>
+	</body>
+</html>
+
